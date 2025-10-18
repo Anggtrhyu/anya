@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anya Forger — Little Telepath | Fanpage</title>
+  <meta name="description" content="Halaman fan interaktif untuk Anya Forger (Spy x Family) — profil, kutipan lucu, galeri, dan fitur 'membaca pikiran' buat hiburan." />
+  <style>
+    :root{
+      --bg:#fff9fb;
+      --card:#fff;
+      --muted:#6b7280;
+      --pink:#ff90b3;
+      --accent:#ff6fa3;
+      --shadow: 0 10px 30px rgba(15,23,42,0.06);
+      --radius:14px;
+      --maxw:1100px;
+      --ff: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#fff9fb 0%, #fff0f5 100%);font-family:var(--ff);color:#0f1724;padding:28px;display:flex;justify-content:center}
+    .wrap{max-width:var(--maxw);width:100%;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.9));border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+
+    header{display:flex;align-items:center;gap:14px}
+    .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--accent));display:grid;place-items:center;color:white;font-weight:800;font-size:32px}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0 0;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:16px}
+
+    .profile{background:var(--card);padding:18px;border-radius:12px}
+    .top{display:flex;gap:14px;align-items:center}
+    .portrait{width:160px;height:160px;border-radius:16px;background:linear-gradient(135deg,#fff2f8,#ffdcea);display:grid;place-items:center;font-size:64px;color:#38213e;position:relative;overflow:hidden}
+    .portrait .bow{position:absolute;right:8px;top:8px;background:linear-gradient(135deg,#ffe6f1,#ffb6d5);padding:6px 8px;border-radius:8px;font-weight:700}
+
+    .meta h2{margin:0}
+    .meta .role{color:var(--muted);font-size:13px}
+
+    .bio{margin-top:12px;color:#334155;line-height:1.5}
+
+    .fun-actions{display:flex;gap:8px;margin-top:12px}
+    .btn{padding:10px 12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--pink),var(--accent));color:white;cursor:pointer;font-weight:700}
+    .ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
+
+    .mindbubble{margin-top:14px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.95));box-shadow:0 6px 20px rgba(15,23,42,0.04);min-height:64px;display:flex;align-items:center;gap:12px}
+    .thought{font-style:italic;color:#7f1d59}
+
+    .stats{display:flex;gap:8px;margin-top:14px}
+    .stat{flex:1;background:linear-gradient(180deg,rgba(255,111,163,0.08),rgba(255,111,163,0.03));padding:10px;border-radius:10px;text-align:center}
+    .stat h3{margin:0}
+    .tiny{font-size:13px;color:var(--muted)}
+
+    /* sidebar */
+    aside .card{background:var(--card);padding:14px;border-radius:12px}
+    .quote{background:linear-gradient(90deg,#fff6fb,#fff0f6);padding:10px;border-radius:10px;color:#9b1748}
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+    .thumb{height:90px;border-radius:10px;background:linear-gradient(135deg,#fff2f8,#ffdcea);display:grid;place-items:center;color:#38213e;font-weight:800}
+
+    .footer{margin-top:16px;display:flex;justify-content:space-between;align-items:center}
+    .tiny-muted{font-size:13px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:920px){main{grid-template-columns:1fr} .portrait{width:120px;height:120px}}
+
+    /* playful sparkle */
+    .sparkle{display:inline-block;transform:translateY(-2px);} 
+    .pulse{animation:pulse 1.6s infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+
+    /* small input */
+    input[type='text']{padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);width:100%}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="logo">A</div>
+      <div>
+        <h1>Anya Forger — Little Telepath</h1>
+        <p class="lead">Halaman fan interaktif — lucu, manis, dan sedikit telepatis.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile">
+        <div class="top">
+          <div class="portrait" aria-hidden="true">
+            😊
+            <div class="bow">♡</div>
+          </div>
+          <div class="meta">
+            <h2>Anya Forger</h2>
+            <div class="role">Telepath • Student • Agent in Training (fanpage)</div>
+            <div style="margin-top:8px" class="tiny">Kecil, cepat paham, dan gemar meniru ekspresi lucu.</div>
+
+            <div class="fun-actions">
+              <button class="btn" id="readMind">Baca Pikiran</button>
+              <button class="btn ghost" id="translate">Terjemahkan 'Anya-ese'</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="bio">Anya adalah karakter imut yang mempunyai kemampuan telepati. Di luar itu, ia suka cokelat, boneka, dan bereaksi berlebihan pada hal-hal manis. Halaman ini dibuat untuk bersenang-senang — semua teks hanyalah fan-made dan untuk hiburan.</p>
+
+        <div class="mindbubble" id="mindbubble" aria-live="polite">
+          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--pink),var(--accent));display:grid;place-items:center;color:white;font-weight:800">💭</div>
+          <div>
+            <div class="thought" id="thoughtText">Anya sedang tenang... (klik 'Baca Pikiran' untuk kejutan!)</div>
+            <div class="tiny" style="margin-top:6px">Catatan: ini hanya fitur hiburan — bukan telepati nyata.</div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>99</h3>
+            <div class="tiny">Kemampuan Lucu</div>
+          </div>
+          <div class="stat">
+            <h3>100</h3>
+            <div class="tiny">Cinta Cokelat</div>
+          </div>
+          <div class="stat">
+            <h3>88</h3>
+            <div class="tiny">Kisah Drama</div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Kutipan Manis</h3>
+          <div class="quote">"Anya suka cokelat!" — Anya (terkadang)</div>
+
+          <h4 style="margin-top:12px">Galeri Mini</h4>
+          <div class="gallery" aria-hidden="true">
+            <div class="thumb">1</div>
+            <div class="thumb">2</div>
+            <div class="thumb">3</div>
+            <div class="thumb">4</div>
+          </div>
+
+          <h4 style="margin-top:12px">Permainan</h4>
+          <label class="tiny-muted">Masukkan kata/teks untuk ditebak Anya:</label>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <input id="userInput" type="text" placeholder="contoh: cokelat" />
+            <button class="btn" id="guessBtn">Tebak</button>
+          </div>
+          <div id="guessResult" class="tiny" style="margin-top:8px;color:#6b2143"></div>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer">
+      <div class="tiny-muted">Fanpage sederhana • Untuk penggunaan pribadi • Tidak resmi</div>
+      <div class="tiny-muted">Mau versi gelap atau bahasa Inggris? Ketik saja.</div>
+    </div>
+  </div>
+
+  <script>
+    const thoughts = [
+      'Ada cokelat di dekat sini... 🍫',
+      'Oh! Kelinci lucu! 🐰',
+      'Papa... Mama... Anya ingin main!',
+      'Mata-mata? Anya siap! (eh?)',
+      'Aku lapar. Cokelat!!!'
+    ];
+
+    document.getElementById('readMind').addEventListener('click', ()=>{
+      const t = thoughts[Math.floor(Math.random()*thoughts.length)];
+      const el = document.getElementById('thoughtText');
+      el.textContent = t;
+      el.classList.add('pulse');
+      setTimeout(()=>el.classList.remove('pulse'),900);
+    });
+
+    document.getElementById('translate').addEventListener('click', ()=>{
+      alert("'Anya-ese' terdeteksi: 95% kemungkinan kata itu berarti 'cokelat' atau 'maaf, Anya takut' (hanya bercanda)");
+    });
+
+    document.getElementById('guessBtn').addEventListener('click', ()=>{
+      const v = document.getElementById('userInput').value.trim().toLowerCase();
+      const out = document.getElementById('guessResult');
+      if(!v){ out.textContent = 'Masukkan sesuatu dulu ya 🙂'; return; }
+      // silly logic
+      if(v.includes('cok') || v.includes('choco')){
+        out.textContent = 'Anya TERLIHAT ANTUSIAS — kemungkinan besar Anya suka ini! 🍫';
+      } else if(v.length < 4){
+        out.textContent = 'Anya sedikit bingung... tapi ia tersenyum.';
+      } else {
+        out.textContent = 'Anya berpikir... hmm, itu menarik!';
+      }
+    });
+  </script>
+</body>
+</html>
